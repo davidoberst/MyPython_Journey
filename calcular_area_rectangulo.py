@@ -1,3 +1,5 @@
+#calcular el area de un rectangulo
+
 base = int(input("ingresa base : "))
 altura = int(input("ingresa altura :"))
 
