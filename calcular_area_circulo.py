@@ -1,7 +1,7 @@
 #calcular area de un circulo
 
-def area(radio):
- operacion = radio **2 * 3.1416
- print (round(operacion,2))
+def a(r):
+ o = r **2 * 3.1416
+ print (round(o,2))
 
-area(10)
+a(10)
