@@ -1,5 +1,4 @@
 #ordenar una lista sin usar .sort()
-
 lista = [21,22,11,0,1,5,9,44,80]
 for x in range(len(lista)):
  for y in range(len(lista)):
