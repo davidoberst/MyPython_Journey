@@ -5,6 +5,7 @@ print("numeros pares encontrados:")
 for x in list:
     if x % 2 == 0:
      print(x)
+     
 
 #imprimir numeros impares de una lista 
 
