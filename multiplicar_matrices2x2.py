@@ -7,5 +7,7 @@ total = 0
 for x in matriz:
    total += sum(x)
 print(total)
+
+
     
 
