@@ -6,14 +6,33 @@ import time
 
 accs = {"user":"password"} 
 
+
+def home():
+  print(pyfiglet.figlet_format("Home!", font="small"))
+  print("home")
+
+
+
 def login():
   print(pyfiglet.figlet_format("Login", font="small"))
   usr_log = input("Username ---> " )
-  passw_log= input("Password ---> ")
-  if accs.get(usr_log) == (passw_log):
+  while True:
+   passw_log= input("Password ---> ")
+   if accs.get(usr_log) == (passw_log):
+    time.sleep(1)
+    print("Account found...")
+    time.sleep(1)
+    home()
+    
     print("found")
-  else:
-    print("not found")
+    break
+   else:
+    print("Username or password is incorrect...")
+    time.sleep(1)
+    print("try again...")
+    time.sleep(1)
+
+
 
 def createAccount():
   print(pyfiglet.figlet_format("Create an account", font="small"))
