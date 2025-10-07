@@ -21,8 +21,7 @@ for y in userInput[pos+1:]:
   temp2 += y
 if temp2:
  digit2.append(int(temp2))
- print(digit1,digit2)
-
+print(f"La respuesta es : {digit1[0] + digit2[0]}")
 
   
  
