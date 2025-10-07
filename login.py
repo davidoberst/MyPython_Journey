@@ -9,7 +9,7 @@ accs = {"user":"password"}
 
 def home():
   print(pyfiglet.figlet_format("Home!", font="small"))
-  print("home")
+  print(f"Welcome!!")
 
 
 
