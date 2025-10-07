@@ -7,3 +7,4 @@ def c(n, p):
     return result
 print(c(2, 5))
 
+
