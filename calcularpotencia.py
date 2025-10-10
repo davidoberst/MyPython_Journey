@@ -8,3 +8,5 @@ def c(n, p):
 print(c(2, 5))
 
 
+
+
