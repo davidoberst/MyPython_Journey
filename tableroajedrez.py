@@ -1,8 +1,6 @@
 #Dibujar un tablero de ajedrez en texto
 
 
-
-
 colors = {"white":"⬜",
           "black":"⬛"}
 jn = ("".join(colors.values()))
@@ -13,9 +11,8 @@ for x in range(4):
     print(file)
     print(file2)
     
+ 
 
-
-    
 
     
    
