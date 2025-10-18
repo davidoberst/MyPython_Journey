@@ -36,21 +36,37 @@ def createTicket():
     else:
         pass
 
-
-
 def FIFO():
+ global tickets
  #search for ID of the Ticket
  print("")
  print("\n ------------FIFO------------------")
  time.sleep(1)
  print("Searching for Tickets")
- if not tickets:
+ time.sleep(1)
+ if not tickets or tickets == []:
      print("\n No tickets founded...")
+     time.sleep(1)
+     print("")
+     input("Press enter to go back")
  else:
-     print("\n Tickets founded!")
-     
-        
-
+     tickets = sorted(tickets, key=lambda x: x["ID"])
+     print("\n Tickets founded!!!")
+     time.sleep(1)
+     print("...")
+     while tickets: 
+        x = tickets[0]
+        print(f'Managing ticket number {x["ID"]}')
+        x["Status"] = "Atended"
+        ticketsAtended.append(x)
+        tickets.remove(x)
+        time.sleep(5)
+        print(f' ticket number {x["ID"]} succesfully managed')  
+        if not tickets:
+         time.sleep(3)
+         print("All the tickets has been managed!")
+         break
+    
 def System():
     if not tickets:
         print("No tickets yet.")    
@@ -70,7 +86,8 @@ while True:
     print("2. See Tickets")
     print("3.Manage Tickets")
     print("")
-    option = input("\n Escribe 'exit' para salir o elige una opción (1,2, o 3): ").strip().lower()
+    option = input("\n Escribe 'exit' para salir o elige una opción (1,2,3 o 4): ").strip().lower()
+    print("")
     if option == "exit":
         break
     elif option == "1":
