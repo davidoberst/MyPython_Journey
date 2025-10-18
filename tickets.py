@@ -75,7 +75,7 @@ def Managed():
         time.sleep(1)
         print("No tickets atended yet...")
     else:
-        for x in tickets:
+        for x in ticketsAtended:
             for clave, valor in x.items():
                 print(f"{clave} : {valor}")
             print("")
