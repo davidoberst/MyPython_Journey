@@ -2,9 +2,8 @@ import time
 
 # Creación de tickets
 tickets = []
+ticketsAtended = []
 ticket_id = 0
-
-
 
 def createTicket():
     global ticket_id, t
@@ -15,11 +14,18 @@ def createTicket():
     time.sleep(1)
     ticket["description"] = input("Description: ")
     time.sleep(1)
-    ticket["priority"] = input("Priority (high, medium, low): ")
-    time.sleep(1)
-    ticket_id += 1
-    ticket["ID"] = ticket_id
-    ticket["Status"] = "Pending"
+    while True:
+     priority  = ticket["priority"] = input("Priority (high, medium, low): ")
+     time.sleep(1)
+     ticket_id += 1
+     ticket["ID"] = ticket_id
+     ticket["Status"] = "Pending"
+     if priority.lower() not in ["high","medium","low"]:
+        time.sleep(1)
+        print("Please, select a valid option...")
+        time.sleep(1)
+     else:
+         break
     tickets.append(ticket)
     time.sleep(1)
     print("...")
@@ -33,11 +39,8 @@ def createTicket():
 
 
 def System():
-    
-    print("----- TICKET SYSTEM -----")
     if not tickets:
-        print("No tickets yet.")
-        
+        print("No tickets yet.")    
     else:
         print("-----------Available Tickets------------ :")
         for x in tickets:
@@ -46,12 +49,9 @@ def System():
             print("")
     input("Press enter to go back : ")
 
-
-
-
-
-
-
+def SystemLogic():
+ pass
+ 
 
 # Bucle principal
 while True:
@@ -59,7 +59,7 @@ while True:
     print("Options:")
     print("1. Create a Ticket")
     print("2. See Tickets")
-    option = input("Escribe 'exit' para salir o elige una opción (1 o 2): ").strip().lower()
+    option = input("\n Escribe 'exit' para salir o elige una opción (1 o 2): ").strip().lower()
     if option == "exit":
         break
     elif option == "1":
