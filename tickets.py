@@ -66,6 +66,21 @@ def FIFO():
          time.sleep(3)
          print("All the tickets has been managed!")
          break
+
+def Managed():
+    print("")
+    time.sleep(1)
+    print("----Tickets Atended----- :")
+    if not ticketsAtended:
+        time.sleep(1)
+        print("No tickets atended yet...")
+    else:
+        for x in tickets:
+            for clave, valor in x.items():
+                print(f"{clave} : {valor}")
+            print("")
+    input("Press enter to go back : ")
+
     
 def System():
     if not tickets:
@@ -96,6 +111,8 @@ while True:
         System()
     elif option == "3":
         FIFO()
+    elif option == "4":
+        Managed()
     else:
         print("Invalid option. Try again.")
 
